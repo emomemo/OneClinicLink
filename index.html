@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم | عيادتي</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-logo"><svg width="36" height="36" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0 rounded-lg shadow-sm overflow-hidden" aria-label="One Health Network Logo"><defs><clipPath id="logo-clip-md-tiffany"><rect width="200" height="200" rx="20"></rect></clipPath><linearGradient id="tiffany-grad-md" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0ABAB5"></stop><stop offset="100%" stop-color="#0E8388"></stop></linearGradient></defs><g clip-path="url(#logo-clip-md-tiffany)"><rect width="200" height="200" fill="#0ABAB5"></rect><path d="M 0 200 L 200 85 L 200 200 Z" fill="#0E8388"></path><line x1="-5" y1="202" x2="205" y2="83" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></line><line x1="130" y1="46" x2="78" y2="102" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"></line><line x1="78" y1="102" x2="124" y2="148" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round"></line><line x1="78" y1="102" x2="63" y2="168" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"></line><circle cx="130" cy="46" r="38" fill="#FFFFFF"></circle><circle cx="78" cy="102" r="31" fill="#FFFFFF"></circle><circle cx="124" cy="148" r="28" fill="#FFFFFF"></circle><circle cx="63" cy="168" r="17" fill="#FFFFFF"></circle></g></svg></div>
+    <div><h1>عيادتي</h1><span>نظام إدارة العيادات</span></div>
+  </div>
+  <nav class="nav">
+    <p class="nav-label">الرئيسية</p>
+    <a href="index.html" class="active"><span class="ico">▦</span> لوحة التحكم</a>
+    <a href="#"><span class="ico">🗓</span> الحجوزات</a>
+    <a href="#"><span class="ico">👤</span> المرضى</a>
+    <a href="#"><span class="ico">🩺</span> الأطباء</a>
+    <a href="#"><span class="ico">🗂</span> التخصصات</a>
+    <p class="nav-label">الإدارة</p>
+    <a href="#"><span class="ico">💳</span> الفواتير والمدفوعات</a>
+    <a href="#"><span class="ico">📊</span> التقارير</a>
+    <a href="page-template.html"><span class="ico">📄</span> صفحة داخلية (قالب)</a>
+    <p class="nav-label">النظام</p>
+    <a href="#"><span class="ico">⚙️</span> الإعدادات</a>
+    <a href="#"><span class="ico">🚪</span> تسجيل الخروج</a>
+  </nav>
+  <div class="sidebar-foot">v1.0 — عيادتي © 2026</div>
+</aside>
+  <div class="main">
+
+<header class="topbar">
+  <button class="burger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+  <div class="search"><span>🔍</span><input type="text" placeholder="ابحث عن مريض، حجز، طبيب..."></div>
+  <div class="topbar-actions">
+    <button class="icon-btn">🔔<span class="badge">5</span></button>
+    <button class="icon-btn">✉️<span class="badge">2</span></button>
+    <div class="profile">
+      <div class="avatar">س</div>
+      <div><p>د. سارة أحمد</p><span>مديرة العيادة</span></div>
+    </div>
+  </div>
+</header>
+    <main class="content">
+
+      <div class="page-head">
+        <div>
+          <h2>لوحة التحكم</h2>
+          <p>نظرة عامة على حجوزات وعمليات العيادة — الخميس 22 أكتوبر 2026</p>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-outline">⬇ تصدير التقرير</button>
+          <button class="btn">＋ حجز جديد</button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-ico" style="background:var(--tiffany-light)">🗓</div>
+          <div><h3>142</h3><p>حجز اليوم</p><small class="up">▲ 12% عن أمس</small></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-ico" style="background:#E4F6EE">👥</div>
+          <div><h3>38</h3><p>مريض بالانتظار</p><small class="up">▲ 5 جدد</small></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-ico" style="background:#FCF1DE">⏳</div>
+          <div><h3>17</h3><p>حجوزات معلّقة</p><small class="down">▼ يحتاج تأكيد</small></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-ico" style="background:#E7ECFB">💰</div>
+          <div><h3>24,500 ج.م</h3><p>إيرادات اليوم</p><small class="up">▲ 8%</small></div>
+        </div>
+      </section>
+
+      <div class="grid">
+        <!-- Reservations table -->
+        <section class="panel">
+          <div class="panel-head">
+            <h3>أحدث الحجوزات</h3>
+            <a href="#">عرض الكل ←</a>
+          </div>
+          <div style="overflow-x:auto">
+          <table>
+            <thead>
+              <tr><th>المريض</th><th>الطبيب</th><th>التخصص</th><th>الموعد</th><th>الحالة</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="patient"><div class="avatar">م</div> محمد عبدالله</div></td>
+                <td>د. كريم سمير</td><td>قلب</td><td>10:30 ص</td>
+                <td><span class="chip confirm">مؤكد</span></td>
+                <td class="row-actions"><button>✏️</button><button>👁</button></td>
+              </tr>
+              <tr>
+                <td><div class="patient"><div class="avatar">ن</div> نورهان علي</div></td>
+                <td>د. سارة أحمد</td><td>جلدية</td><td>11:00 ص</td>
+                <td><span class="chip pending">معلق</span></td>
+                <td class="row-actions"><button>✏️</button><button>👁</button></td>
+              </tr>
+              <tr>
+                <td><div class="patient"><div class="avatar">ي</div> يوسف حسن</div></td>
+                <td>د. منى فؤاد</td><td>عظام</td><td>11:45 ص</td>
+                <td><span class="chip done">تمت الزيارة</span></td>
+                <td class="row-actions"><button>✏️</button><button>👁</button></td>
+              </tr>
+              <tr>
+                <td><div class="patient"><div class="avatar">هـ</div> هند محمود</div></td>
+                <td>د. كريم سمير</td><td>قلب</td><td>12:15 م</td>
+                <td><span class="chip confirm">مؤكد</span></td>
+                <td class="row-actions"><button>✏️</button><button>👁</button></td>
+              </tr>
+              <tr>
+                <td><div class="patient"><div class="avatar">ع</div> عمر فاروق</div></td>
+                <td>د. سارة أحمد</td><td>جلدية</td><td>01:00 م</td>
+                <td><span class="chip cancel">ملغي</span></td>
+                <td class="row-actions"><button>✏️</button><button>👁</button></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </section>
+
+        <!-- Side column -->
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <section class="panel">
+            <div class="panel-head"><h3>تقويم الحجوزات</h3></div>
+            <div class="panel-body">
+              <div class="cal-head">
+                <button>‹</button><h4>أكتوبر 2026</h4><button>›</button>
+              </div>
+              <div class="cal-grid" id="cal"></div>
+            </div>
+          </section>
+          <section class="panel">
+            <div class="panel-head"><h3>المواعيد القادمة</h3><a href="#">الكل ←</a></div>
+            <div class="panel-body">
+              <ul class="upcoming">
+                <li><span class="time">10:30</span><div><p>محمد عبدالله</p><span>د. كريم سمير — قلب</span></div></li>
+                <li><span class="time">11:00</span><div><p>نورهان علي</p><span>د. سارة أحمد — جلدية</span></div></li>
+                <li><span class="time">12:15</span><div><p>هند محمود</p><span>د. كريم سمير — قلب</span></div></li>
+                <li><span class="time">01:30</span><div><p>لينا عادل</p><span>د. منى فؤاد — عظام</span></div></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<script>
+// mini calendar
+const cal = document.getElementById('cal');
+const dows = ['أحد','إثن','ثلا','أرب','خمي','جمع','سبت'];
+let html = dows.map(d=>'<span class="dow">'+d+'</span>').join('');
+// Oct 2026 starts on Thursday (day index 4)
+for(let i=0;i<4;i++) html += '<span></span>';
+const withAppt = [3,7,12,18,22,26];
+for(let d=1; d<=31; d++){
+  let cls = 'cal-day';
+  if(d===22) cls += ' today';
+  if(withAppt.indexOf(d) > -1) cls += ' dot';
+  html += '<span class="'+cls+'">'+d+'</span>';
+}
+cal.innerHTML = html;
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قالب الصفحة الداخلية | عيادتي</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<aside class="sidebar" id="sidebar">
+  <div class="brand">
+    <div class="brand-logo">✚</div>
+    <div><h1>عيادتي</h1><span>نظام إدارة العيادات</span></div>
+  </div>
+  <nav class="nav">
+    <p class="nav-label">الرئيسية</p>
+    <a href="index.html" class="active"><span class="ico">▦</span> لوحة التحكم</a>
+    <a href="#"><span class="ico">🗓</span> الحجوزات</a>
+    <a href="#"><span class="ico">👤</span> المرضى</a>
+    <a href="#"><span class="ico">🩺</span> الأطباء</a>
+    <a href="#"><span class="ico">🗂</span> التخصصات</a>
+    <p class="nav-label">الإدارة</p>
+    <a href="#"><span class="ico">💳</span> الفواتير والمدفوعات</a>
+    <a href="#"><span class="ico">📊</span> التقارير</a>
+    <a href="page-template.html"><span class="ico">📄</span> صفحة داخلية (قالب)</a>
+    <p class="nav-label">النظام</p>
+    <a href="#"><span class="ico">⚙️</span> الإعدادات</a>
+    <a href="#"><span class="ico">🚪</span> تسجيل الخروج</a>
+  </nav>
+  <div class="sidebar-foot">v1.0 — عيادتي © 2026</div>
+</aside>
+  <div class="main">
+
+<header class="topbar">
+  <button class="burger" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+  <div class="search"><span>🔍</span><input type="text" placeholder="ابحث عن مريض، حجز، طبيب..."></div>
+  <div class="topbar-actions">
+    <button class="icon-btn">🔔<span class="badge">5</span></button>
+    <button class="icon-btn">✉️<span class="badge">2</span></button>
+    <div class="profile">
+      <div class="avatar">س</div>
+      <div><p>د. سارة أحمد</p><span>مديرة العيادة</span></div>
+    </div>
+  </div>
+</header>
+    <main class="content">
+
+      <!-- breadcrumb + page head -->
+      <p class="breadcrumb">الرئيسية / <b>اسم الصفحة</b></p>
+      <div class="page-head">
+        <div>
+          <h2>عنوان الصفحة</h2>
+          <p>وصف قصير لمحتوى هذه الصفحة وما تقدمه للمستخدم.</p>
+        </div>
+        <div style="display:flex;gap:10px">
+          <button class="btn btn-outline">إجراء ثانوي</button>
+          <button class="btn">＋ إجراء رئيسي</button>
+        </div>
+      </div>
+
+      <!-- optional filter bar -->
+      <section class="panel" style="margin-bottom:22px">
+        <div class="panel-body" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+          <div class="search" style="max-width:260px"><span>🔍</span><input placeholder="بحث..."></div>
+          <select style="padding:10px 14px;border-radius:8px;border:1px solid var(--tiffany-border);font-family:inherit">
+            <option>كل التخصصات</option><option>قلب</option><option>جلدية</option><option>عظام</option>
+          </select>
+          <select style="padding:10px 14px;border-radius:8px;border:1px solid var(--tiffany-border);font-family:inherit">
+            <option>كل الحالات</option><option>مؤكد</option><option>معلق</option><option>ملغي</option>
+          </select>
+          <input type="date" style="padding:9px 14px;border-radius:8px;border:1px solid var(--tiffany-border);font-family:inherit">
+        </div>
+      </section>
+
+      <!-- content blocks: duplicate/replace as needed -->
+      <div class="card-row" style="margin-bottom:22px">
+        <section class="panel"><div class="panel-head"><h3>بيانات / نموذج</h3></div>
+          <div class="panel-body"><div class="placeholder">ضع الجدول أو النموذج هنا</div></div>
+        </section>
+        <section class="panel"><div class="panel-head"><h3>تفاصيل إضافية</h3></div>
+          <div class="panel-body"><div class="placeholder">ضع التفاصيل هنا</div></div>
+        </section>
+      </div>
+
+      <section class="panel">
+        <div class="panel-head"><h3>قسم كامل العرض</h3></div>
+        <div class="panel-body"><div class="placeholder" style="min-height:260px">محتوى رئيسي (جدول بيانات كبير، إلخ)</div></div>
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
